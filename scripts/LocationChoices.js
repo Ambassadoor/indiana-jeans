@@ -1,6 +1,6 @@
-export const LocationChoices = () => {
-    // TODO: Fetch locations from the API
-    
+export const LocationChoices = async () => {
+    const response = await fetch("http://localhost:8088/socioLocations")
+    const locations = await response.json()
 
     let html = `
         <div class="survey-input">
