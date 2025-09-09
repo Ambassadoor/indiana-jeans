@@ -24,6 +24,21 @@
       "ownsBlueJeans": true,
       "socioLocationId": 2,
       "id": 5
+    },
+    {
+      "ownsBlueJeans": true,
+      "socioLocationId": 3,
+      "id": 6
+    },
+    {
+      "ownsBlueJeans": true,
+      "socioLocationId": 5,
+      "id": 7
+    },
+    {
+      "ownsBlueJeans": false,
+      "socioLocationId": 3,
+      "id": 8
     }
   ],
   "socioLocations": [
