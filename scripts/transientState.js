@@ -12,6 +12,8 @@ export const setSocioLocationId = (chosenLocation) => {
 }
 
 export const savesurveySubmission = async () => {
+
+    if (transientState.socioLocationId > 0 && typeof(transientState.ownsBlueJeans) === 'boolean') {
     const postOptions = {
         method: "POST",
         headers: {
@@ -19,5 +21,7 @@ export const savesurveySubmission = async () => {
         },
         body: JSON.stringify(transientState)
     }
-    const response = await fetch("http://localhost:8088/submissions", postOptions)
+    const response = await fetch("http://localhost:8088/submissions", postOptions)} else {
+        window.alert("Please complete the form")
+    }
 }
