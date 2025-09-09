@@ -11,7 +11,7 @@ export const setSocioLocationId = (chosenLocation) => {
     transientState.socioLocationId = chosenLocation
 }
 
-export const savesurveySubmission = async () => {
+export const saveSurveySubmission = async () => {
 
     if (transientState.socioLocationId > 0 && typeof(transientState.ownsBlueJeans) === 'boolean') {
     const postOptions = {
@@ -21,7 +21,12 @@ export const savesurveySubmission = async () => {
         },
         body: JSON.stringify(transientState)
     }
-    const response = await fetch("http://localhost:8088/submissions", postOptions)} else {
+    const response = await fetch("http://localhost:8088/submissions", postOptions)
+    const newSubmissionEvent = new CustomEvent("newSubmissionCreated")
+    document.dispatchEvent(newSubmissionEvent);
+
+} else {
         window.alert("Please complete the form")
     }
+
 }

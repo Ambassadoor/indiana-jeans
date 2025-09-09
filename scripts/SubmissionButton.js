@@ -1,9 +1,9 @@
-import { savesurveySubmission } from "./transientState.js"
+import { saveSurveySubmission } from "./transientState.js"
 
 const handleSurveySubmission = (clickEvent) => {
     if (clickEvent.target.id === "submission-button") {
         console.log("Button clicked!")
-        savesurveySubmission()
+        saveSurveySubmission()
     }
 }
 
