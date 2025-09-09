@@ -1,7 +1,7 @@
 import { setOwnBlueJeans } from "./transientState.js"
 
 const handleOwnershipChange = (changeEvent) => {
-    if (changeEvent.target.name === "ownJeans") {
+    if (changeEvent.target.name === "ownsJeans") {
         const convertedToBoolean = JSON.parse(changeEvent.target.value)
         setOwnBlueJeans(convertedToBoolean)
     }
