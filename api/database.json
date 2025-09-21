@@ -39,6 +39,20 @@
       "ownsBlueJeans": false,
       "socioLocationId": 3,
       "id": 8
+    },
+    {
+      "ownsBlueJeans": true,
+      "socioLocationId": 2,
+      "brandName": "Levi",
+      "yearOfPurchase": "2025",
+      "id": 9
+    },
+    {
+      "ownsBlueJeans": false,
+      "socioLocationId": 1,
+      "brandName": "",
+      "yearOfPurchase": 0,
+      "id": 10
     }
   ],
   "socioLocations": [

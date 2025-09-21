@@ -13,6 +13,8 @@ export const SubmissionList = async () => {
                 <h2>Submission ${submission.id}</h2>
                 <p>Owns Blue Jeans: ${submission.ownsBlueJeans}</p>
                 <p>Location: ${submission.socioLocation.label}</p>
+                ${submission.brandName ? `<p>Brand: ${submission.brandName}</p>` : ""}
+                ${submission.yearOfPurchase ? `<p>Year of Purchase: ${submission.yearOfPurchase}</p>` : ""}
             </section>
         `
     })

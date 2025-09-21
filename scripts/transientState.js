@@ -1,6 +1,8 @@
 const transientState = {
     ownsBlueJeans: false,
-    socioLocationId: 0
+    socioLocationId: 0,
+    brandName: "",
+    yearOfPurchase: 0
 }
 
 export const setOwnBlueJeans = (chosenOwnership) => {
@@ -11,8 +13,17 @@ export const setSocioLocationId = (chosenLocation) => {
     transientState.socioLocationId = chosenLocation
 }
 
-export const saveSurveySubmission = async () => {
+export const setBrandName = (brand) => {
+    console.log(brand)
+    transientState.brandName = brand
+}
 
+export const setYearOfPurchase = (year) => {
+    transientState.yearOfPurchase = year
+}
+
+export const saveSurveySubmission = async () => {
+    console.log(transientState)
     if (transientState.socioLocationId > 0 && typeof(transientState.ownsBlueJeans) === 'boolean') {
     const postOptions = {
         method: "POST",
